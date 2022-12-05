@@ -8,7 +8,7 @@ Il n'y a pas de front, nous utilisons les commandes CURL pour lancer des requêt
 
 Voici le dockerfile qui permet de compiler et lancer le SpringBoot, que l'on peut retrouver dans les fichiers du GIT dans le dossier spring-boot-redis.
 
-`FROM maven:3.6.3-adoptopenjdk-11 as stage1
+```FROM maven:3.6.3-adoptopenjdk-11 as stage1
 WORKDIR /opt/demo
 COPY pom.xml .
 
@@ -20,7 +20,7 @@ FROM  adoptopenjdk/openjdk11:jre-11.0.9_11-alpine
 WORKDIR /opt/demo
 COPY --from=stage1 /opt/demo/target/*.jar /opt/demo.jar
 EXPOSE 8085
-ENTRYPOINT ["java","-Djava.security.egd=file:/dev/./urandom", "-jar", "/opt/demo.jar"]`
+ENTRYPOINT ["java","-Djava.security.egd=file:/dev/./urandom", "-jar", "/opt/demo.jar"]```
 
 -----------------
 
@@ -28,7 +28,7 @@ ENTRYPOINT ["java","-Djava.security.egd=file:/dev/./urandom", "-jar", "/opt/demo
 
 Voici le docker compose pour lancer Redis et l'application SpringBoot, que l'on peut retrouvé dans les fichiers du GIT dans le dossier spring-boot-redis.
 
-`version: '3'
+```version: '3'
 services:
   app:
     build: .
@@ -45,7 +45,7 @@ services:
     ports:
      - "6379:6379"
 volumes:
-  data:`
+  data:```
   
 -----------------
 

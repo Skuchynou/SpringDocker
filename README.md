@@ -2,6 +2,8 @@
 TP pour le cours Composant à l'uphf, nous avons utilisé Spring Boot comme backend et Redis en Base de données. 
 Il n'y a pas de front, nous utilisons les commandes CURL pour lancer des requêtes.
 
+Fait par KWIATEK Guyliane et STILLATUS Julien
+
 -----------------
 
 ## Dockerfile

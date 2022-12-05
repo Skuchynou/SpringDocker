@@ -30,7 +30,7 @@ ENTRYPOINT ["java","-Djava.security.egd=file:/dev/./urandom", "-jar", "/opt/demo
 
 ## Docker Compose
 
-Voici le docker compose pour lancer Redis et l'application SpringBoot, que l'on peut retrouvé dans les fichiers du GIT dans le dossier spring-boot-redis.
+Voici le docker compose pour lancer Redis et l'application SpringBoot, que l'on peut retrouver dans les fichiers du GIT dans le dossier spring-boot-redis.
 
 ```
 version: '3'
@@ -57,12 +57,12 @@ volumes:
 
 ## Commandes
 
-Les commandes CURL fonctionne sur le cmd de windows et non le powershell (on a reussi seulement avec le cmd, le powershell de windows bloqué les requetes)
-Voici les commandes CURL pour lancé une requête POST (on se sert du code ascii du caractère espace pour intégrer des espaces dans la chaine à hashé)
+Les commandes CURL fonctionnent sur le cmd de windows et non le powershell (on a reussi seulement avec le cmd, le powershell de windows bloqué les requetes)
+Voici les commandes CURL pour lancer une requête POST (on se sert du code ascii du caractère espace pour intégrer des espaces dans la chaine à hasher)
 
 `curl -X POST http://localhost:8085/api/hash?string=ceci%20est%20un%20test`
 
-Voici les commandes CURL pour lancé une requête GET (on se sert du code ascii du caractère espace pour intégrer des espaces dans la chaine à hashé)
+Voici les commandes CURL pour lancer une requête GET (on se sert du code ascii du caractère espace pour intégrer des espaces dans la chaine à hasher)
 
 `curl -X GET http://localhost:8085/api/hash?string=ceci%20est%20un%20test`
 
